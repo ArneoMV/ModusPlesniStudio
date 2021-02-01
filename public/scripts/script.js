@@ -20,7 +20,6 @@ $(document).ready(function() {
    $('.nav-home').click(function() { 
      $("#main").load("html/Home.html");
      navbarLinks(".nav-home");
-     alert('home');
    });
  
    $('.nav-onama').click(function() {  

@@ -1,0 +1,41 @@
+footer {
+ width: 100%;
+ height: auto;
+ padding: 8vw 2vw 10vw 2vw;
+ background-color: $primary-1;
+ color: $light;
+ letter-spacing: 0.05em;
+ .footer__info {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+  div {
+   justify-self: center;
+  }
+ }
+ .social {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  p {
+   text-align: center;
+   margin: 0 auto;
+   font-weight: 500;
+  }
+  .social__logos {
+   width: 100%;
+   display: flex;
+   grid-gap: 10px;
+   margin: 0 auto;
+   max-width: 140px;
+   a img {
+    width: 32px;
+    height: auto;
+    margin: 0.4em;
+   }
+  }
+ }
+}

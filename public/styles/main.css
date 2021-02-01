@@ -735,6 +735,47 @@ header .navbar .navigation .nav-links a {
   margin-left: -14px;
 }
 
+footer {
+  width: 100%;
+  height: auto;
+  padding: 8vw 2vw 10vw 2vw;
+  background-color: #1B001B;
+  color: #FBFBFB;
+  letter-spacing: 0.05em;
+}
+footer .footer__info {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+footer .footer__info div {
+  justify-self: center;
+}
+footer .social {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+}
+footer .social p {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500;
+}
+footer .social .social__logos {
+  width: 100%;
+  display: flex;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 140px;
+}
+footer .social .social__logos a img {
+  width: 32px;
+  height: auto;
+  margin: 0.4em;
+}
+
 .home section {
   height: 100vh;
   width: 100%;

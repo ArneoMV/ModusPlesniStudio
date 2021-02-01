@@ -12,7 +12,7 @@ $(document).ready(function() {
   let index = 1;
 
   const pagination1 = Math.ceil(galleryItems1.length / maxItem);
-  console.log(pagination1);
+  // console.log(pagination1);
   prev1.addEventListener("click",function() {
     index--;
     check1();
@@ -59,7 +59,7 @@ const max_Item_Natjecanja = 3;
 let index_Natjecanja = 1;
 
 const paginationNatjecanja = Math.ceil(galleryItems_Natjecanja.length / max_Item_Natjecanja);
-  console.log(paginationNatjecanja)
+  // console.log(paginationNatjecanja)
   prev_Natjecanja.addEventListener("click",function(){
     index_Natjecanja--;
     check_Natjecanja();
