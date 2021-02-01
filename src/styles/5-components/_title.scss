@@ -1,0 +1,17 @@
+
+
+// title with undeline
+.title-small-line {
+ margin: 3vw;
+ width: auto;
+ span {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0px;
+  text-align: center;
+  height: 3px;
+  background-color: $light;
+  width: 100px;
+  margin-top: 9px;
+ }
+}

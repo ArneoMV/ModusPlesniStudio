@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 55 Roman';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 53 Ex';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 53 Ex';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 95 Blk';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 93 BlkEx';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 65 Md';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 45 Lt';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 43 LtEx';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 43 LtEx';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 33 ThEx';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 33 ThEx';
+  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.woff2') format('woff2'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.woff') format('woff'),
+      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label, button {
+  font-family: "Helvetica Neue LT Pro", serif;
+  margin: 0;
+  line-height: 1;
+  text-decoration: none;
+}
+// H1 - H6
+h1, h2, h3, h4, h5, h6 {
+ font-weight: 750;
+ letter-spacing: 0.05em;
+ margin: 0;
+}
+p, a{
+ font-weight: 500; 
+ line-height: 1.4;
+}
+
+@include respond-to(extrasmall-screens) {
+ h1 {font-size: 2em;}
+ h2 {font-size: 1.5em;}
+ h3 {font-size: 1.1em;}
+ h4 {font-size: 1em;}
+ h5 {font-size: 0.75em;} 
+ h6 {font-size: 0.75em;}
+ p, a {
+   font-size: 0.7em;
+ }
+}
+@include respond-to(small-screens) {
+ h1 {font-size: 2em;}
+ h2 {font-size: 1.5em;}
+ h3 {font-size: 1.1em;}
+ h4 {font-size: 1em;}
+ h5 {font-size: 0.75em;} 
+ h6 {font-size: 0.75em;}
+ p, a {
+   font-size: 0.8em;
+ }
+}
+@include respond-to(medium-screens) {
+ h1 {font-size: 2.3em;}
+ h2 {font-size: 1.8em;}
+ h3 {font-size: 1.25em;}
+ h4 {font-size: 1em;}
+ h5 {font-size: 0.8em;} 
+ h6 {font-size: 0.75em;}
+ p, a {
+   font-size: 0.9em;
+ }
+}
+@include respond-to(large-screens) {
+ h1 {font-size: 2.5em;}
+ h2 {font-size: 2.3em;}
+ h3 {font-size: 1.95em;}
+ h4 {font-size: 1.3em;}
+ h5 {font-size: 1em;} 
+ h6 {font-size: 0.75em;}
+ p, a {
+   font-size: 1em;
+ }
+}
+@include respond-to(extralarge-screens) {
+ h1 {font-size: 2.8em;}
+ h2 {font-size: 2em;}
+ h3 {font-size: 1.95em;}
+ h4 {font-size: 1.5em;}
+ h5 {font-size: 1em;} 
+ h6 {font-size: 0.75em;}
+
+ p, a {
+   font-size: 1em;
+ }
+}
+@include respond-to(extraextralarge-screens) {
+ h1 {font-size: 3.2em;}
+ h2 {font-size: 2.8em;}
+ h3 {font-size: 1.85em;}
+ h4 {font-size: 1.55em;}
+ h5 {font-size: 1.25em;} 
+ h6 {font-size: 1em;}
+
+ p, a {
+   font-size: 1em;
+ }
+}

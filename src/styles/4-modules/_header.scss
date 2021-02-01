@@ -1,0 +1,125 @@
+
+header {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  .navbar {
+    height: 100%;
+    padding: 0 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    img {
+      width: 180px;
+      height: auto;
+      margin-top: 15px;
+    }
+    .navigation {
+      .nav-links {
+        width: auto;
+        display: flex;
+        justify-content: end;
+        align-self: center;
+        position: relative;
+        &.menu-active {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        a{
+          color: $dark;
+          text-decoration: none;
+          letter-spacing: 3px;
+          font-weight: 400;
+          font-size: 1em;
+          position: relative;
+          top: 0.5vh;
+          padding: 0 0.5em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Hamburger
+.navbar .menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-grow: 1;
+  span {
+    display: block;
+    border-radius: 15px;
+    width: 33px;
+    height: 2px;
+    background-color: $dark;
+    margin: 5px;
+    transition: all 0.4s ease;
+  }
+}
+
+
+
+@media screen and (max-width: 780px) {
+  header {
+    .navbar {
+      h1 {
+        flex-grow: 1;
+      }
+      .navigation {
+        .nav-links {
+          height: 90vh;
+          width: 100%;
+          position: absolute;
+          top: 10vh;
+          left: 0px;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 1);
+          transform: translateX(-100%);
+          transition: transform 0.5s ease-in;
+          z-index: 99;
+          a {
+            color: $light;
+            padding: 1.3em 0;
+          }
+        }
+        .menu-icon {
+          display: block;
+          z-index: 99999;
+        }
+      }
+    }
+  }
+}
+
+
+
+// Hamburger animation
+@keyframes navLinkAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.navbar .menu-icon.span-anime {
+  span {
+    &:first-child {
+      transform: rotate(-135deg) translate(-16px, 10px);
+      margin-left: -14px;
+    }
+    &:nth-child(2) { opacity: 0; }
+    &:last-child {
+      transform: rotate(135deg) translate(-20px, -5px);
+      margin-left: -14px;
+    }
+  }
+}

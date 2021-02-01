@@ -1,0 +1,67 @@
+/* Global atributes */
+@import "../2-base/_colors.scss";
+@import "../3-layout/_breakpoint.scss";
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: border-box;
+  margin : 0;
+  padding : 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif; 
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  background-color: #F3ECEC;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  bottom: 0;
+  overflow-x: hidden;
+}
+section {
+  .section {
+    height: 100vh;
+    width: 100%;
+  }
+}
+.filler {
+  padding-top: 10vh;
+}
+.middle {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+// ACTIVE NAVIGATION
+.link_active {font-weight: 900 !important;}
+
+
+
+// scroll bar
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 0.5px;
+}
+*::-webkit-scrollbar-track {
+  background: purple;
+}
+::-webkit-scrollbar-thumb {
+  background: lighten(purple, 20%);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: purple;
+}
