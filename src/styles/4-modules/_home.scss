@@ -140,21 +140,68 @@
 
 // 3. SHOW DANCE SAVEZ
 .hsds {
-.title-small-line { text-align: center; }
-h3, p { color: $dark; }
-.grid_neki_tekst {
-display: grid;
-grid-template-columns: 60% 40%;
-justify-items: center;
-align-items: center;
-div { text-align: justify;}
-img {
-place-self: center;
-max-width: 200px;
-height: auto;
+    width: 100%;
+    height: 80%;
+    padding: 1.5em;
+    .title-small-line { text-align: center; }
+    h3, p { color: $dark; }
+    .grid_neki_tekst {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        justify-items: center;
+        align-items: center;
+        article { 
+            max-width: 65ch; 
+            text-align: justify;
+            grid-area: hsds_article;
+            margin: 3em 0 3em 0;
+        }
+        img {
+            place-self: center;
+            max-width: 200px;
+            height: auto;
+            grid-area: hsds_image;
+        }
+        @mixin home_mobile_view {
+            width: 100%;
+            display: grid;
+            grid-template-rows: 40% 60%;
+            grid-template-columns: 100%;
+            justify-items: center;
+            grid-gap: 0.5em;
+            grid-template-areas: 
+              "hsds_article"
+              "hsds_image";
+              img { place-self: center;  }
+              article { place-self: center; }
+        }
+        @mixin home_tablet_view {
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-gap: 1em;
+            grid-template-areas: 
+              "hsds_article hsds_image";
+            img { place-self: center; }
+            article { place-self: center; }
+        }
+        @mixin home_desktop_view {
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-template-areas: 
+              "hsds_article hsds_image";
+            img { place-self: center; }
+            article { place-self: center; }
+        }
+       
+        @include respond-to(extrasmall-screens) { @include home_mobile_view(); }
+        @include respond-to(small-screens) {  @include home_mobile_view(); }
+        @include respond-to(medium-screens) {  @include home_mobile_view(); }
+        @include respond-to(large-screens) {  @include home_tablet_view(); }
+        @include respond-to(extralarge-screens) {  @include home_desktop_view(); }
+        @include respond-to(extraextralarge-screens) {  @include home_desktop_view(); }
+    }
 }
-}
-}
+    
 // 4. NATJECANJA
 .home__natjecanja {
 color: $light !important;
