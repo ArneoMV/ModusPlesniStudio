@@ -1,4 +1,5 @@
 @import "../3-layout/_breakpoint.scss";
+@import "../5-components/galleryPagination.scss";
 
 // CONTAINER / PAGES
 .home {
@@ -84,27 +85,57 @@
  }
 
 
-
-
  // 2. GALERIJA
-.galerija-news {
-height: 90vh;
-width: auto;
-display: grid;
-justify-items: center;
-align-items: center;
-.title-small-line { color: $light; }
-.gallery {
-width: 100%;
-// height: 50vh;
-// max-height: 500px;
-display: grid;
-.gallery-items-1 {
-height: 100%;
-// max-height: 400px;
-// min-height: 300px;
-}
-}
+ .gallery {
+    width: 80%;
+    display: grid;
+    justify-self: center;
+    .title-small-line { 
+        color: $light;
+        text-align: center;
+    }
+    .gallery__news {
+        height: 100%;
+        width: auto;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        .title-small-line { 
+            color: $light;
+            text-align: center;
+        }
+        .gallery__items {
+            display: grid;
+            grid-gap: 8px;
+        }
+    }
+
+    @mixin home_mobile_view {
+        .gallery__items {
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @mixin home_tablet_view {
+        .gallery__items {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+    @mixin home_desktop_view {
+        .gallery__items {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+   
+    @include respond-to(extrasmall-screens) { @include home_mobile_view(); }
+    @include respond-to(small-screens) {  @include home_mobile_view(); }
+    @include respond-to(medium-screens) {  @include home_mobile_view(); }
+    @include respond-to(large-screens) {  @include home_tablet_view(); }
+    @include respond-to(extralarge-screens) {  @include home_desktop_view(); }
+    @include respond-to(extraextralarge-screens) {  @include home_desktop_view(); }
 }
 
 // 3. SHOW DANCE SAVEZ

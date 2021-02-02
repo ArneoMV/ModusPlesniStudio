@@ -4,7 +4,7 @@
 	margin: 0 auto;
 	height: auto;
 }
-.gallery-items-1, .gallery__items__natjecanja {
+.gallery__items__natjecanja {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -34,7 +34,7 @@
 	max-height: 200px;
 	display: block;
 	object-fit: cover;
-	border-radius: 8px;
+	border-radius: 4px;
 }
 .gallery .item .caption{
 	position: absolute;

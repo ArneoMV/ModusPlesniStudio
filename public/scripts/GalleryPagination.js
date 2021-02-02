@@ -2,7 +2,7 @@ $(document).ready(function() {
   // GALLERY AND PAGINATION
 
   // HOMEPAGE GALLERY 1 
-  const galleryItems1 = document.querySelector(".gallery-items-1").children;
+  const galleryItems1 = document.querySelector(".gallery__items").children;
   const prev1 = document.getElementById("prev-1");
   const next1 = document.getElementById("next-1");
   const page1 = document.getElementById("page-num-1");

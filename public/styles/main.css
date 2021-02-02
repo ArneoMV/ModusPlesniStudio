@@ -620,6 +620,89 @@ footer {
 .demo {
   display: grid; }
 
+.gallery_container {
+  max-width: 900px;
+  margin: 0 auto;
+  height: auto; }
+
+.gallery__items__natjecanja {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px; }
+
+.gallery .item.hide {
+  display: none; }
+
+.gallery .item.show {
+  display: block;
+  animation: show .5s ease; }
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.9); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+.gallery .item img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px; }
+
+.gallery .item .caption {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center; }
+
+.gallery .pagination {
+  width: 270px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center; }
+  .gallery .pagination div {
+    display: inline-block;
+    margin: 0 10px; }
+
+.button__dark__pagination, .label__dark__pagination, .button__light__pagination, .label__light__pagination {
+  font-size: 0.8rem; }
+
+#prev-1.disabled, #next-1.disabled, #prev__natjecanja.disabled, #next__natjecanja.disabled {
+  pointer-events: none; }
+
+.button__dark__pagination {
+  color: #151515;
+  border: 1px solid #151515;
+  border-radius: 50%;
+  padding: 13px 13px;
+  cursor: pointer;
+  cursor: pointer; }
+
+.label__dark__pagination {
+  color: #151515; }
+
+.button__light__pagination {
+  color: #FBFBFB;
+  border: 1px solid #FBFBFB;
+  border-radius: 50%;
+  padding: 13px 13px;
+  cursor: pointer;
+  cursor: pointer; }
+
+.label__light__pagination {
+  color: #FBFBFB; }
+
 .home {
   border: 2px solid black; }
   .home section {
@@ -717,19 +800,49 @@ footer {
       .home__container article {
         justify-self: start; } }
 
-.galerija-news {
-  height: 90vh;
-  width: auto;
+.gallery {
+  width: 80%;
   display: grid;
-  justify-items: center;
-  align-items: center; }
-  .galerija-news .title-small-line {
-    color: #FBFBFB; }
-  .galerija-news .gallery {
-    width: 100%;
-    display: grid; }
-    .galerija-news .gallery .gallery-items-1 {
-      height: 100%; }
+  justify-self: center; }
+  .gallery .title-small-line {
+    color: #FBFBFB;
+    text-align: center; }
+  .gallery .gallery__news {
+    height: 100%;
+    width: auto;
+    display: grid;
+    justify-items: center;
+    align-items: center; }
+    .gallery .gallery__news .title-small-line {
+      color: #FBFBFB;
+      text-align: center; }
+    .gallery .gallery__news .gallery__items {
+      display: grid;
+      grid-gap: 8px; }
+  @media only screen and (min-width: 151px) and (max-width: 479px) {
+    .gallery .gallery__items {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 321px) and (max-width: 479px) {
+    .gallery .gallery__items {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 481px) and (max-width: 719px) {
+    .gallery .gallery__items {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 721px) and (max-width: 919px) {
+    .gallery .gallery__items {
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 921px) and (max-width: 1199px) {
+    .gallery .gallery__items {
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media only screen and (min-width: 1200px) {
+    .gallery .gallery__items {
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr 1fr; } }
 
 .hsds .title-small-line {
   text-align: center; }
@@ -769,7 +882,7 @@ footer {
   margin: 0 auto;
   height: auto; }
 
-.gallery-items-1, .gallery__items__natjecanja {
+.gallery__items__natjecanja {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -795,7 +908,7 @@ footer {
   max-height: 200px;
   display: block;
   object-fit: cover;
-  border-radius: 8px; }
+  border-radius: 4px; }
 
 .gallery .item .caption {
   position: absolute;
