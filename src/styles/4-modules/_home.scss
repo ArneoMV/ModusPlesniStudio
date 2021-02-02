@@ -140,9 +140,10 @@
 
 // 3. SHOW DANCE SAVEZ
 .hsds {
-    width: 100%;
+    width: 70%;
     height: 80%;
     padding: 1.5em;
+    margin: 0 auto;
     .title-small-line { text-align: center; }
     h3, p { color: $dark; }
     .grid_neki_tekst {

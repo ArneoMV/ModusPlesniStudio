@@ -845,9 +845,10 @@ footer {
       grid-template-columns: 1fr 1fr 1fr; } }
 
 .hsds {
-  width: 100%;
+  width: 70%;
   height: 80%;
-  padding: 1.5em; }
+  padding: 1.5em;
+  margin: 0 auto; }
   .hsds .title-small-line {
     text-align: center; }
   .hsds h3, .hsds p {
