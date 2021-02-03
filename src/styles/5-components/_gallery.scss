@@ -11,12 +11,15 @@
 	grid-gap: 8px;
 }
 
+
+
 .gallery .item.hide{
 	display: none;
 }
 .gallery .item.show{
 	display: block;
 	animation: show .5s ease;
+	box-shadow: $shadow__card;
 }
 @keyframes show{
 	0%{
@@ -51,6 +54,7 @@
 
 // PAGINATION
 .gallery {
+	margin: 0 auto;
 	.pagination {
 		width: 270px;
 		padding: 15px 0;

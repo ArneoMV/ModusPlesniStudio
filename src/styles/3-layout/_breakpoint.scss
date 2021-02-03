@@ -41,22 +41,29 @@ $screen-xxl: 1200px;
 .demo {
     display: grid;
    
-    @mixin xs-screen {
+    // @mixin xs-screen {
+    // }
+    // @mixin small-screen {
+    // }
+    // @mixin medium-screen {
+    // }
+    // @mixin large-screen {
+    // }
+    // @mixin xl-screen {
+    // }
+    // @mixin xxl-screen {
+    // }
+    @mixin mobile__screen {
     }
-    @mixin small-screen {
+    @mixin tablet__screen {
     }
-    @mixin medium-screen {
+    @mixin desktop__screen {
     }
-    @mixin large-screen {
-    }
-    @mixin xl-screen {
-    }
-    @mixin xxl-screen {
-    }
-    @include respond-to(extrasmall-screens) { @include xs-screen(); }
-    @include respond-to(small-screens) {  @include small-screen(); }
-    @include respond-to(medium-screens) {  @include medium-screen(); }
-    @include respond-to(large-screens) {  @include large-screen(); }
-    @include respond-to(extralarge-screens) {  @include xl-screen(); }
-    @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
+
+    @include respond-to(extrasmall-screens) { @include mobile__screen(); }
+    @include respond-to(small-screens) {  @include mobile__screen(); }
+    @include respond-to(medium-screens) {  @include tablet__screen(); }
+    @include respond-to(large-screens) {  @include tablet__screen(); }
+    @include respond-to(extralarge-screens) {  @include desktop__screen(); }
+    @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 }

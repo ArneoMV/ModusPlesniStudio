@@ -1,0 +1,58 @@
+
+.conateinr_natjecanje {
+  height: auto;
+  width: 100%;
+  .scrollmenu {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    // overflow: auto;
+    // white-space: nowrap;
+    display: grid;
+    border-bottom: 2px solid $light;
+    p {
+      display: inline-block;
+      padding: 10px 18px;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        font-style: italic;
+        font-weight: 650;
+      }
+    }
+  }
+
+
+  @mixin mobile__screen {
+    .scrollmenu {
+      width: 90vw;
+      margin: 2em auto;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+  }
+  @mixin tablet__screen {
+    .scrollmenu {
+      width: 90vw;
+      margin: 1.5em auto;
+      grid-template-columns: repeat(9, 1fr);
+    }
+  }
+  @mixin desktop__screen {
+    .scrollmenu {
+      width: 70vw;
+      margin: 1em auto;
+      grid-template-columns: repeat(9, 1fr);
+    }
+  }
+
+  @include respond-to(extrasmall-screens) { @include mobile__screen(); }
+  @include respond-to(small-screens) {  @include mobile__screen(); }
+  @include respond-to(medium-screens) {  @include tablet__screen(); }
+  @include respond-to(large-screens) {  @include tablet__screen(); }
+  @include respond-to(extralarge-screens) {  @include desktop__screen(); }
+  @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
+}
+
+
+

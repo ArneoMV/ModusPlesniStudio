@@ -1,7 +1,8 @@
 
 
 // title with undeline
-.title-small-line {
+@mixin title__line {
+ text-align: center;
  margin: 3vw;
  width: auto;
  span {
@@ -10,8 +11,18 @@
   margin-top: 0px;
   text-align: center;
   height: 3px;
-  background-color: $light;
   width: 100px;
   margin-top: 9px;
  }
+}
+
+.title__line__dark {
+ @include title__line();
+ span { background-color: $dark; }
+ color: $dark;
+}
+.title__line__light {
+ @include title__line();
+ span { background-color: $light; }
+ color: $light;
 }

@@ -1,5 +1,5 @@
 @import "../3-layout/_breakpoint.scss";
-@import "../5-components/galleryPagination.scss";
+@import "../5-components/gallery.scss";
 
 // CONTAINER / PAGES
 .home {
@@ -12,11 +12,11 @@
         // &:nth-child(3) { background-color: $light; }
         &:nth-child(4) { background-color: $primary-0; }
         // &:nth-child(5) { background-color: $light; }
-        &:nth-child(3), &:nth-child(4), &:nth-child(5) {
-            width: 100%;
-            display: grid;
-            align-items: center;
-        }
+        // &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+        //     width: 100%;
+        //     display: grid;
+        //     align-items: center;
+        // }
     }
 }
 
@@ -87,23 +87,15 @@
 
  // 2. GALERIJA
  .gallery {
-    width: 80%;
+    width: 90%;
     display: grid;
     justify-self: center;
-    .title-small-line { 
-        color: $light;
-        text-align: center;
-    }
     .gallery__news {
         height: 100%;
         width: auto;
         display: grid;
         justify-items: center;
         align-items: center;
-        .title-small-line { 
-            color: $light;
-            text-align: center;
-        }
         .gallery__items {
             display: grid;
             grid-gap: 8px;
@@ -140,11 +132,9 @@
 
 // 3. SHOW DANCE SAVEZ
 .hsds {
-    width: 70%;
+    width: 80%;
     height: 80%;
-    padding: 1.5em;
     margin: 0 auto;
-    .title-small-line { text-align: center; }
     h3, p { color: $dark; }
     .grid_neki_tekst {
         display: grid;
@@ -155,7 +145,6 @@
             max-width: 65ch; 
             text-align: justify;
             grid-area: hsds_article;
-            margin: 3em 0 3em 0;
         }
         img {
             place-self: center;
@@ -204,25 +193,51 @@
 }
     
 // 4. NATJECANJA
-.home__natjecanja {
-color: $light !important;
-.natjecanja_title__timeline {
-text-align: center;
-padding: 1.5em;
-width: 100%;
-.natjecanja__timeline {
-border-bottom: 2px solid purple;
-padding-top: 0.5em;
-width: auto;
-display: flex;
-justify-content: space-between;
-}
-}
+.natjecanja {
+    width: 100vw;
+    color: $light !important;
+    padding: 2em 0;
+    h2 {
+        text-align: center;
+    }
+    .tx-opis {
+        max-width: 95ch;
+        text-align: justify;
+    }
 }
 // 5. Upis
 .upis {
-p {
-font-size: 3em;
-text-align: center;
-}
+    .tx-opis {
+        p {
+            max-width: 95ch;
+            text-align: justify;
+        }
+    }
+    .upis_kartice_container {
+        width: 100%;
+        display: grid;
+        grid-gap: 0.5rem;
+    }
+    @mixin mobile__screen {
+        .upis_kartice_container {
+            grid-template-columns: repeat(1, 1fr)
+        }
+    }
+    @mixin tablet__screen {
+        .upis_kartice_container {
+            grid-template-columns: repeat(2, 1fr)
+        }
+    }
+    @mixin desktop__screen {
+        .upis_kartice_container {
+            grid-template-columns: repeat(3, 1fr)
+        }
+    }
+
+    @include respond-to(extrasmall-screens) { @include mobile__screen(); }
+    @include respond-to(small-screens) {  @include mobile__screen(); }
+    @include respond-to(medium-screens) {  @include tablet__screen(); }
+    @include respond-to(large-screens) {  @include tablet__screen(); }
+    @include respond-to(extralarge-screens) {  @include desktop__screen(); }
+    @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 }
