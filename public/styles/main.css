@@ -801,14 +801,11 @@ footer {
   letter-spacing: 0.05em;
 }
 footer .footer__info {
-  width: 80%;
   height: auto;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-footer .footer__info div {
-  justify-self: center;
+  justify-items: start;
+  grid-gap: 0.5em;
 }
 footer .social {
   width: 100%;
@@ -831,6 +828,50 @@ footer .social .social__logos a img {
   width: 32px;
   height: auto;
   margin: 0.4em;
+}
+@media only screen and (min-width: 151px) and (max-width: 479px) {
+  footer .footer__info {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+  footer .footer__info {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 719px) {
+  footer .footer__info {
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 919px) {
+  footer .footer__info {
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 921px) and (max-width: 1199px) {
+  footer .footer__info {
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  footer .footer__info div {
+    place-self: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  footer .footer__info {
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  footer .footer__info div {
+    place-self: center;
+  }
 }
 
 /* Brakepoint's */

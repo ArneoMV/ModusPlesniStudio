@@ -6,14 +6,13 @@ footer {
  color: $light;
  letter-spacing: 0.05em;
  .footer__info {
-  width: 80%;
   height: auto;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
- 
+  justify-items: start;
+  grid-gap: 0.5em;
   div {
-   justify-self: center;
+   // justify-self: center;
   }
  }
  .social {
@@ -38,4 +37,34 @@ footer {
    }
   }
  }
+
+ @mixin mobile__screen {
+  .footer__info {
+   width: 90%;
+   grid-template-columns: 1fr 1fr;
+  }
+ }
+ @mixin tablet__screen {
+  .footer__info {
+   width: 80%;
+   grid-template-columns: 1fr 1fr;
+  }
+ }
+ @mixin desktop__screen {
+  .footer__info {
+   width: 80%;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-items: center;
+   div {
+    place-self: center;
+   }
+  }
+ }
+
+ @include respond-to(extrasmall-screens) { @include mobile__screen(); }
+ @include respond-to(small-screens) {  @include mobile__screen(); }
+ @include respond-to(medium-screens) {  @include tablet__screen(); }
+ @include respond-to(large-screens) {  @include tablet__screen(); }
+ @include respond-to(extralarge-screens) {  @include desktop__screen(); }
+ @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 }
