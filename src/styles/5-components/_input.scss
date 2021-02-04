@@ -1,0 +1,167 @@
+/* INPUT */
+
+textarea:focus, input:focus{
+    outline: none;
+}
+@mixin inputGroup {
+    position: relative;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid $dark;
+    .control-label {
+        font-family: 'Montserrat';
+        position: absolute;
+        top: 0.25rem;
+        pointer-events: none;
+        padding-left: 0.125rem;
+        z-index: 1;
+        color: $dark;
+        font-size: 1rem;
+        font-weight: normal;
+        -webkit-transition: all 0.28s ease;
+        transition: all 0.28s ease;
+    }
+    .bar-form {
+        position: relative;
+        border-bottom: 0.0625rem solid $dark;
+        display: block;
+    }
+    input, textarea {
+        width: 100%;
+        display: block;
+        background: none;
+        padding: 0.125rem 0.125rem 0.0625rem;
+        font-size: 1rem;
+        line-height: 1.9;
+        color: transparent;
+        border-width: 0;
+        border-color: transparent;
+        -webkit-transition: all 0.28s ease;
+        transition: all 0.28s ease;
+    }
+    input {
+        /* Show green borders when valid */
+        &:focus, &:valid, &.form-file, &.has-value {
+            color: $dark;
+        }
+    }
+    textarea {
+    &:focus, &:valid, &.form-file, &.has-value {
+        color: $dark;
+        }
+    }
+    input {
+    &:focus ~ .control-label, &:valid ~ .control-label, &.form-file ~ .control-label, &.has-value ~ .control-label {
+        font-size: 0.8rem;
+        color: $dark;
+        top: -1rem;
+        left: 0;
+        }
+    }
+    textarea {
+    &:focus ~ .control-label, &:valid ~ .control-label, &.form-file ~ .control-label, &.has-value ~ .control-label {
+        font-size: 0.8rem;
+        color: $dark;
+        top: -1rem;
+        left: 0;
+        }
+    }
+    select:focus, input:focus, textarea:focus {
+        outline: none;
+    }
+    select:focus ~ .control-label, input:focus ~ .control-label, textarea:focus ~ .control-label {
+        color: $dark;
+        font-family: 'Montserrat';
+    }
+    select:focus ~ .bar-form::before, input:focus ~ .babar-formr::before, textarea:focus ~ .bar-form::before {
+        width: 100%;
+        left: 0;
+    }
+}
+.inputFilled {
+    @include inputGroup();
+    width: 100%;
+}
+
+// CHECKBOX
+.checkbox label {
+    font-family: 'Montserrat';
+    position: relative;
+    cursor: pointer;
+    padding-left: 2rem;
+    text-align: left;
+    color: $dark;
+    display: block;
+}
+.checkbox input {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+}
+.checkbox {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    .helper {
+        color: #333333;
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 1rem;
+        height: 1rem;
+        z-index: 0;
+        border: 0.125rem solid $dark;
+        border-radius: 0.0625rem;
+        -webkit-transition: border-color 0.28s ease;
+        transition: border-color 0.28s ease;
+        &::before, &::after {
+            position: absolute;
+            height: 0;
+            width: 0.2rem;
+            background-color: $dark;
+            display: block;
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            border-radius: 0.25rem;
+            content: '';
+            -webkit-transition: opacity 0.28s ease, height 0s linear 0.28s;
+            transition: opacity 0.28s ease, height 0s linear 0.28s;
+            opacity: 0;
+        }
+        &::before {
+            top: 0.65rem;
+            left: 0.38rem;
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+            // box-shadow: 0 0 0 0.0625rem #fff;
+        }
+        &::after {
+            top: 0.3rem;
+            left: 0;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+    label:hover .helper {
+        color: $dark;
+    }
+    input:checked ~ .helper {
+        color: #337ab7;
+        &::after, &::before {
+            opacity: 1;
+            -webkit-transition: height 0.28s ease;
+            transition: height 0.28s ease;
+        }
+        &::after {
+            height: 0.5rem;
+        }
+        &::before {
+            height: 1.2rem;
+            -webkit-transition-delay: 0.28s;
+            transition-delay: 0.28s;
+        }
+    }
+}
+.checkbox + .checkbox {
+    margin-top: 1rem;
+}

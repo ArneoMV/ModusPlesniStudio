@@ -204,6 +204,13 @@ table {
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "HelveticaNeueLTPro-BdExO";
+  src: url("fonts/Helvetica/HelveticaNeueLTPro-BdExO.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 h1, h2, h3, h4, h5, h6, p, a, label, button {
   font-family: "Helvetica Neue LT Pro", serif;
   margin: 0;
@@ -1331,6 +1338,15 @@ footer .social .social__logos a img {
   }
 }
 
+.contact .form {
+  max-width: 730px;
+  margin: 0 auto;
+}
+#status {
+  width: 100%;
+  height: auto;
+}
+
 .card {
   width: auto;
   max-width: 450px;
@@ -1526,6 +1542,30 @@ footer .social .social__logos a img {
   background-color: #FBFBFB;
 }
 
+.title-2 {
+  padding: 5vw 0;
+}
+.title-2 h2, .title-2 p {
+  text-align: center;
+  text-transform: uppercase;
+}
+.title-2 h2 {
+  line-height: 1.3em;
+}
+.title-2 p {
+  color: #A447A5;
+}
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+  .title-2 h2 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 719px) {
+  .title-2 h2 {
+    font-size: 2em;
+  }
+}
+
 .conateinr_natjecanje {
   height: auto;
   width: 100%;
@@ -1641,6 +1681,613 @@ footer .social .social__logos a img {
   text-align: left;
   color: #151515;
   text-align: left;
+}
+
+.contact-dropbox-container {
+  display: grid;
+}
+.contact-dropbox-container p {
+  align-self: end;
+}
+.contact-dropbox-container .selectbox, .contact-dropbox-container select {
+  width: 100%;
+}
+@media only screen and (min-width: 151px) and (max-width: 479px) {
+  .contact-dropbox-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .contact-dropbox-container .selectbox, .contact-dropbox-container select {
+    justify-self: start;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+  .contact-dropbox-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .contact-dropbox-container .selectbox, .contact-dropbox-container select {
+    justify-self: start;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 719px) {
+  .contact-dropbox-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .contact-dropbox-container .selectbox, .contact-dropbox-container select {
+    justify-self: start;
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 919px) {
+  .contact-dropbox-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-dropbox-container .selectbox, .contact-dropbox-container select {
+    justify-self: end;
+  }
+}
+@media only screen and (min-width: 921px) and (max-width: 1199px) {
+  .contact-dropbox-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-dropbox-container .selectbox, .contact-dropbox-container select {
+    justify-self: end;
+  }
+}
+
+.selectbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-family: "Montserrat";
+}
+
+.option-container {
+  background-color: #FBFBFB;
+  color: #151515;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-family: "Montserrat";
+}
+
+.selectbox--active .option-container {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.selectbox__displayWord, .option-container__option {
+  padding: 12px 24px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10+ and Edge */
+  -moz-user-select: none;
+  /* Mozila */
+}
+
+.selectbox__displayWord {
+  position: relative;
+  height: 40px;
+  border-bottom: 2px solid #151515;
+  color: #FBFBFB;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectbox__displayWord::after {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  content: "";
+  background: url("../images/icons/arrow-down-light-01.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 16px;
+  width: 16px;
+  color: #FBFBFB;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+}
+
+.selectbox--active .selectbox__displayWord::after {
+  transform: translateY(-50%) rotateZ(180deg);
+}
+
+.selectbox--unselect .selectbox__displayWord {
+  color: gray;
+}
+
+.selectbox--shake {
+  animation: shake 0.3s forwards;
+}
+
+.option-container {
+  position: absolute;
+  z-index: 999;
+  top: 50px;
+  left: 0;
+  width: 100%;
+}
+
+.option-container__option:hover {
+  background-color: #151515;
+  color: #FBFBFB;
+}
+
+.option__radio {
+  display: none;
+}
+
+.option__label {
+  cursor: pointer;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/* INPUT */
+textarea:focus, input:focus {
+  outline: none;
+}
+
+.inputFilled {
+  position: relative;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #151515;
+  width: 100%;
+}
+.inputFilled .control-label {
+  font-family: "Montserrat";
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #151515;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+.inputFilled .bar-form {
+  position: relative;
+  border-bottom: 0.0625rem solid #151515;
+  display: block;
+}
+.inputFilled input, .inputFilled textarea {
+  width: 100%;
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: transparent;
+  border-width: 0;
+  border-color: transparent;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+.inputFilled input {
+  /* Show green borders when valid */
+}
+.inputFilled input:focus, .inputFilled input:valid, .inputFilled input.form-file, .inputFilled input.has-value {
+  color: #151515;
+}
+.inputFilled textarea:focus, .inputFilled textarea:valid, .inputFilled textarea.form-file, .inputFilled textarea.has-value {
+  color: #151515;
+}
+.inputFilled input:focus ~ .control-label, .inputFilled input:valid ~ .control-label, .inputFilled input.form-file ~ .control-label, .inputFilled input.has-value ~ .control-label {
+  font-size: 0.8rem;
+  color: #151515;
+  top: -1rem;
+  left: 0;
+}
+.inputFilled textarea:focus ~ .control-label, .inputFilled textarea:valid ~ .control-label, .inputFilled textarea.form-file ~ .control-label, .inputFilled textarea.has-value ~ .control-label {
+  font-size: 0.8rem;
+  color: #151515;
+  top: -1rem;
+  left: 0;
+}
+.inputFilled select:focus, .inputFilled input:focus, .inputFilled textarea:focus {
+  outline: none;
+}
+.inputFilled select:focus ~ .control-label, .inputFilled input:focus ~ .control-label, .inputFilled textarea:focus ~ .control-label {
+  color: #151515;
+  font-family: "Montserrat";
+}
+.inputFilled select:focus ~ .bar-form::before, .inputFilled input:focus ~ .babar-formr::before, .inputFilled textarea:focus ~ .bar-form::before {
+  width: 100%;
+  left: 0;
+}
+
+.checkbox label {
+  font-family: "Montserrat";
+  position: relative;
+  cursor: pointer;
+  padding-left: 2rem;
+  text-align: left;
+  color: #151515;
+  display: block;
+}
+
+.checkbox input {
+  width: auto;
+  opacity: 1e-8;
+  position: absolute;
+  left: 0;
+}
+
+.checkbox {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.checkbox .helper {
+  color: #333333;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  z-index: 0;
+  border: 0.125rem solid #151515;
+  border-radius: 0.0625rem;
+  -webkit-transition: border-color 0.28s ease;
+  transition: border-color 0.28s ease;
+}
+.checkbox .helper::before, .checkbox .helper::after {
+  position: absolute;
+  height: 0;
+  width: 0.2rem;
+  background-color: #151515;
+  display: block;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-radius: 0.25rem;
+  content: "";
+  -webkit-transition: opacity 0.28s ease, height 0s linear 0.28s;
+  transition: opacity 0.28s ease, height 0s linear 0.28s;
+  opacity: 0;
+}
+.checkbox .helper::before {
+  top: 0.65rem;
+  left: 0.38rem;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.checkbox .helper::after {
+  top: 0.3rem;
+  left: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.checkbox label:hover .helper {
+  color: #151515;
+}
+.checkbox input:checked ~ .helper {
+  color: #337ab7;
+}
+.checkbox input:checked ~ .helper::after, .checkbox input:checked ~ .helper::before {
+  opacity: 1;
+  -webkit-transition: height 0.28s ease;
+  transition: height 0.28s ease;
+}
+.checkbox input:checked ~ .helper::after {
+  height: 0.5rem;
+}
+.checkbox input:checked ~ .helper::before {
+  height: 1.2rem;
+  -webkit-transition-delay: 0.28s;
+  transition-delay: 0.28s;
+}
+
+.checkbox + .checkbox {
+  margin-top: 1rem;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLT Pro 55 Roman";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 53 Ex";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 53 Ex";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 95 Blk";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 93 BlkEx";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 65 Md";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 45 Lt";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 43 LtEx";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 43 LtEx";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 33 ThEx";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLT Pro 33 ThEx";
+  src: url("fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.woff2") format("woff2"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.woff") format("woff"), url("fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueLTPro-BdExO";
+  src: url("fonts/Helvetica/HelveticaNeueLTPro-BdExO.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+h1, h2, h3, h4, h5, h6, p, a, label, button {
+  font-family: "Helvetica Neue LT Pro", serif;
+  margin: 0;
+  line-height: 1;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+p, a {
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+@media only screen and (min-width: 151px) and (max-width: 479px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: 0.75em;
+  }
+
+  h6 {
+    font-size: 0.75em;
+  }
+
+  p, a {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: 0.75em;
+  }
+
+  h6 {
+    font-size: 0.75em;
+  }
+
+  p, a {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 719px) {
+  h1 {
+    font-size: 2.3em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: 0.8em;
+  }
+
+  h6 {
+    font-size: 0.75em;
+  }
+
+  p, a {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 919px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2.3em;
+  }
+
+  h3 {
+    font-size: 1.95em;
+  }
+
+  h4 {
+    font-size: 1.3em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.75em;
+  }
+
+  p, a {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 921px) and (max-width: 1199px) {
+  h1 {
+    font-size: 2.8em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.95em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.75em;
+  }
+
+  p, a {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.2em;
+  }
+
+  h2 {
+    font-size: 2.8em;
+  }
+
+  h3 {
+    font-size: 1.85em;
+  }
+
+  h4 {
+    font-size: 1.55em;
+  }
+
+  h5 {
+    font-size: 1.25em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  p, a {
+    font-size: 1em;
+  }
+}
+.btn__form {
+  font-family: "HelveticaNeueLTPro-ThExO";
+  font-size: 40px;
+  padding: 3rem 5rem;
+  background-color: rgba(124, 22, 124, 0.33);
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -107,6 +107,18 @@
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: 'HelveticaNeueLTPro-BdExO';
+  src: 
+      // url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff2') format('woff2'),
+      // url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff') format('woff'),
+      //url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.ttf') format('truetype');
+      url('fonts/Helvetica/HelveticaNeueLTPro-BdExO.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 
 h1, h2, h3, h4, h5, h6, p, a, label, button {
   font-family: "Helvetica Neue LT Pro", serif;

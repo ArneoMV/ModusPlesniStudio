@@ -1,10 +1,81 @@
-<div class="kontakt">
-<h1>Kontakt</h1>
-</div>
+<!-- CONTACT -->
+<section class="container contact filler">
+  <div class="title-2 animate__animated animate__bounceInLeft">
+      <h2>Slobodno nam se obratite?</h2>
+  </div>
+  <form action="#" method="post" class="form" id="contact_form">
+      <fieldset>
+          <!-- DROPDOWN  -->
+          <div class="contact-dropbox-container">
+              <p>Što Vas zanima?</p>
+              <div class="selectbox selectbox--unselect" data-option="">
+                  <div class="selectbox__displayWord">
+                      -- ODABERI --
+                  </div>
+                  <div class="option-container">
+                      <div class="option-container__option">
+                          <input type="radio" class="option__radio" id="type01" name="category" value="TV production">
+                          <label class="option__label" for="type02" data-value="TVproduction">Želim se upisati</label>
+                      </div>
+                      <div class="option-container__option">
+                          <input type="radio" class="option__radio" id="type02" name="category"value="Satellite connections">
+                          <label class="option__label" for="type02" data-value="Satellite connections">Zanima me više o plesu? Što mi preporučate?</label>
+                      </div>
+                      <div class="option-container__option">
+                          <input type="radio" class="option__radio" id="type03" name="category"value="Graphic design">
+                          <label class="option__label" for="type03" data-value="Graphic design">Privatni sati</label>
+                      </div>
+                      <div class="option-container__option">
+                          <input type="radio" class="option__radio" id="type04" name="category"value="Augmented reality">
+                          <label class="option__label" for="type04" data-value="Augmented reality">Ples za sex</label>
+                      </div>
+                      <div class="option-container__option">
+                          <input type="radio" class="option__radio" id="type05" name="category" value="Other">
+                          <label class="option__label" for="type05" data-value="Other">Other</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- INPUTS -->
+          <div class="inputFilled">
+              <input id="contact_name" type="text" name="name" required pattern="\S+.*">
+              <label for="contact_name" class="control-label">Vaše cijenjeno ime</label>
+              <i class="bar-form"></i>
+          </div>
+          <div class="inputFilled">
+              <input id="contact_email" type="email" name="email" required pattern="\S+.*">
+              <label for="contact_email" class="control-label">Elektornička pošta</label>
+              <i class="bar-form"></i>
+          </div>
+          <div class="inputFilled">
+              <input id="contact_phone" type="number" name="phone" required="required">
+              <label for="contact_phone" class="control-label">Telefon</label>
+              <i class="bar-form"></i>
+          </div>
+          <div class="inputFilled">
+              <textarea id="contact_message" rows="5" cols="10" name="message" required></textarea>
+              <label for="contact_message" class="control-label">Kako Vam možemo pomoći?</label>
+              <i class="bar-form"></i>
+          </div>
+          <div class="checkbox">
+              <label>
+                  <input type="checkbox" checked="checked" name="terms"/>
+                  <i class="helper"></i>I agree that Croatel will save my personal information so that they can
+                  contact me in the future.
+              </label>
+          </div>
+      </fieldset>
+      <button id="btn_form" class="btn__form" type="submit" value="Send">POŠALJI</button>
+      <span id="status"></span>
+  </form>
+</section>
 
 
 
 <footer id="footer"></footer>
+
+<script src="scripts/dropdown.js"></script>
+<script src="scripts/contact.js"></script>
 <script>
   $('#footer').load('html/footer.html');
  </script>

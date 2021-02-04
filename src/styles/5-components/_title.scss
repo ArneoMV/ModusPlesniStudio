@@ -26,3 +26,23 @@
  span { background-color: $light; }
  color: $light;
 }
+
+.title-2 {
+ padding: 5vw 0;
+ h2, p {
+   text-align: center;
+   text-transform: uppercase;
+ }
+ h2 {
+   line-height: 1.3em;
+ }
+ p {
+   color: $primary-0;
+ }
+ @include respond-to(small-screens) {
+   h2 { font-size: 1.5em;}
+ }
+ @include respond-to(medium-screens) {
+   h2 { font-size: 2em;}
+ }
+}

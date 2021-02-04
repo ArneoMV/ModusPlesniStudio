@@ -1,0 +1,147 @@
+
+// //  DROPDOWN  CONTAINER
+.contact-dropbox-container {
+  display: grid;
+  p {
+    align-self: end;
+  }
+  .selectbox, select {
+    width: 100%;
+  }
+  @include respond-to(extrasmall-screens) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    .selectbox, select {
+      justify-self: start;
+    }
+  }
+  @include respond-to(small-screens) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    .selectbox, select {
+      justify-self: start;
+    }
+  }
+  @include respond-to(medium-screens) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    .selectbox, select {
+      justify-self: start;
+    }
+  }
+  @include respond-to(large-screens) {
+    grid-template-columns: 1fr 1fr;
+    .selectbox, select {
+      justify-self: end;
+    }
+  }
+  @include respond-to(large-2-screens) {
+    grid-template-columns: 1fr 1fr;
+    .selectbox, select {
+      justify-self: end;
+    }
+  }
+  @include respond-to(extralarge-screens) {
+    grid-template-columns: 1fr 1fr;
+    .selectbox, select {
+      justify-self: end;
+    };
+  }
+}
+
+//  DROPDOWN  1
+.selectbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  // max-width: 300px;
+  font-family: 'Montserrat';
+}
+.option-container {
+  background-color: $light;
+  color: $dark;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-family: 'Montserrat';
+}
+.selectbox--active .option-container {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+.selectbox__displayWord, .option-container__option {
+  padding: 12px 24px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  -moz-user-select: none; /* Mozila */
+}
+.selectbox__displayWord {
+  position: relative;
+  height: 40px;
+  border-bottom: 2px solid $dark;
+  color: $light;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin selectbox__displayWord {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  content: "";
+  background: url("../images/icons/arrow-down-light-01.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  height: 16px;
+  width: 16px;
+  color: $light;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+}
+.selectbox__displayWord::after {
+  @include selectbox__displayWord();
+}
+
+.selectbox--active .selectbox__displayWord::after {
+  transform: translateY(-50%) rotateZ(180deg);
+}
+.selectbox--unselect .selectbox__displayWord {
+  color: gray;
+}
+
+.selectbox--shake {
+  animation: shake 0.3s forwards;
+}
+.option-container {
+  position: absolute;
+  z-index: 999;
+  top: 50px;
+  left: 0;
+  width: 100%;
+}
+.option-container__option:hover {
+  background-color: $dark;
+  color: $light;
+}
+.option__radio { display: none; }
+.option__label { cursor: pointer; }
+
+@keyframes shake {
+  10%,
+  90% { transform: translate3d(-1px, 0, 0); }
+  20%,
+  80% { transform: translate3d(2px, 0, 0); }
+  30%,
+  50%,
+  70% { transform: translate3d(-4px, 0, 0); }
+  40%,
+  60% { transform: translate3d(4px, 0, 0); }
+}
