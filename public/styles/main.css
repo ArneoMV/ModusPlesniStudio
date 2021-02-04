@@ -205,8 +205,9 @@ table {
   font-display: swap;
 }
 @font-face {
-  font-family: "HelveticaNeueLTPro-BdExO";
-  src: url("fonts/Helvetica/HelveticaNeueLTPro-BdExO.ttf") format("truetype");
+  font-family: "Helvetica Neue LT Pro 93 Black extended Oblique";
+  font-family: "HelveticaNeueLT Std Blk Cn", "HelveticaNeueLTStd-BlkCn", "hnc_font", "MyFont_IE";
+  src: url("fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff2") format("woff2"), url("fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff") format("woff"), url("fonts/Helvetica/HelveticaNeueLTPro-BlkExO.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -227,6 +228,9 @@ h1, h2, h3, h4, h5, h6 {
 p, a {
   font-weight: 500;
   line-height: 1.15;
+}
+p b, a b {
+  font-weight: 650;
 }
 
 @media only screen and (min-width: 151px) and (max-width: 479px) {
@@ -990,7 +994,7 @@ footer .social .social__logos a img {
 }
 
 .home {
-  border: 2px solid black;
+  margin: 3em 0;
 }
 .home section {
   height: 100vh;
@@ -1340,11 +1344,132 @@ footer .social .social__logos a img {
 
 .contact .form {
   max-width: 730px;
-  margin: 0 auto;
+  margin: 0.5em auto 2em auto;
 }
 #status {
   width: 100%;
   height: auto;
+}
+
+.plesovi .title__1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.plesovi .plesovi_container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 0.5em;
+}
+.plesovi .plesovi_container .ples__item {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 0.5em;
+  justify-items: center;
+  place-self: center;
+}
+.plesovi .plesovi_container .ples__item img {
+  grid-area: ples_image;
+  max-width: 420px;
+  height: auto;
+}
+.plesovi .plesovi_container .ples__item .ples__info {
+  justify-self: start;
+  grid-area: ples_info;
+}
+.plesovi .plesovi_container .ples__item .ples__info h4 {
+  padding: 0.2em 0;
+  font-family: "Helvetica Neue LT Pro";
+  font-size: 1.4em;
+  font-style: oblique;
+  font-weight: 950;
+}
+.plesovi .plesovi_container .ples__item .ples__info p {
+  text-align: justify;
+}
+@media only screen and (min-width: 151px) and (max-width: 479px) {
+  .plesovi {
+    grid-template-columns: 1fr;
+  }
+  .plesovi .ples__item {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "ples_image" "ples_info";
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+  .plesovi {
+    grid-template-columns: 1fr;
+  }
+  .plesovi .ples__item {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "ples_image" "ples_info";
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 719px) {
+  .plesovi {
+    grid-template-columns: 1fr;
+  }
+  .plesovi .ples__item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .plesovi .ples__item:nth-child(even) {
+    grid-template-areas: "ples_info ples_image";
+  }
+  .plesovi .ples__item:nth-child(odd) {
+    grid-template-areas: "ples_image ples_info";
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 919px) {
+  .plesovi {
+    grid-template-columns: 1fr;
+  }
+  .plesovi .ples__item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .plesovi .ples__item:nth-child(even) {
+    grid-template-areas: "ples_info ples_image";
+  }
+  .plesovi .ples__item:nth-child(odd) {
+    grid-template-areas: "ples_image ples_info";
+  }
+}
+@media only screen and (min-width: 921px) and (max-width: 1199px) {
+  .plesovi {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .plesovi .ples__item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .plesovi .ples__item:nth-child(even) {
+    grid-template-areas: "ples_info ples_image";
+  }
+  .plesovi .ples__item:nth-child(odd) {
+    grid-template-areas: "ples_image ples_info";
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .plesovi {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .plesovi .ples__item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .plesovi .ples__item:nth-child(even) {
+    grid-template-areas: "ples_info ples_image";
+  }
+  .plesovi .ples__item:nth-child(odd) {
+    grid-template-areas: "ples_image ples_info";
+  }
 }
 
 .card {
@@ -1554,6 +1679,7 @@ footer .social .social__logos a img {
 }
 .title-2 p {
   color: #A447A5;
+  letter-spacing: 0.05em;
 }
 @media only screen and (min-width: 321px) and (max-width: 479px) {
   .title-2 h2 {
@@ -2084,8 +2210,9 @@ textarea:focus, input:focus {
   font-display: swap;
 }
 @font-face {
-  font-family: "HelveticaNeueLTPro-BdExO";
-  src: url("fonts/Helvetica/HelveticaNeueLTPro-BdExO.ttf") format("truetype");
+  font-family: "Helvetica Neue LT Pro 93 Black extended Oblique";
+  font-family: "HelveticaNeueLT Std Blk Cn", "HelveticaNeueLTStd-BlkCn", "hnc_font", "MyFont_IE";
+  src: url("fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff2") format("woff2"), url("fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff") format("woff"), url("fonts/Helvetica/HelveticaNeueLTPro-BlkExO.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -2106,6 +2233,9 @@ h1, h2, h3, h4, h5, h6 {
 p, a {
   font-weight: 500;
   line-height: 1.15;
+}
+p b, a b {
+  font-weight: 650;
 }
 
 @media only screen and (min-width: 151px) and (max-width: 479px) {
@@ -2283,11 +2413,17 @@ p, a {
   }
 }
 .btn__form {
-  font-family: "HelveticaNeueLTPro-ThExO";
-  font-size: 40px;
-  padding: 3rem 5rem;
+  width: auto;
+  margin: 0.3em auto;
+  padding: 0.5em 0.7em 0.2em 0.7em;
+  display: flex;
+  font-family: "Helvetica Neue LT Pro";
+  font-size: 3em;
+  font-style: oblique;
+  font-weight: 950;
   background-color: rgba(124, 22, 124, 0.33);
   border: 1px solid black;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

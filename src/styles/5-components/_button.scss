@@ -1,9 +1,18 @@
 @import "../2-base/_typography.scss";
 
 .btn__form {
- font-family: 'HelveticaNeueLTPro-ThExO',;
- font-size: 40px;
- padding: 3rem 5rem;
- background-color: rgba(124,22,124, 0.33);
+ width: auto;
+ margin: 0.3em auto;
+ padding: 0.5em 0.7em 0.2em 0.7em;
+ display: flex;
+
+ font-family: "Helvetica Neue LT Pro";
+ font-size: 3em;
+ font-style: oblique;
+ font-weight: 950;
+ 
+ background-color: rgba(124, 22, 124, 0.33);
  border: 1px solid black;
+
+ cursor: pointer;
 }

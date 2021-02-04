@@ -108,12 +108,13 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'HelveticaNeueLTPro-BdExO';
+  // font-family: 'HelveticaNeueLTPro-BdExO';
+  font-family: 'Helvetica Neue LT Pro 93 Black extended Oblique';
+  font-family: "HelveticaNeueLT Std Blk Cn", "HelveticaNeueLTStd-BlkCn", "hnc_font", "MyFont_IE";;
   src: 
-      // url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff2') format('woff2'),
-      // url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff') format('woff'),
-      //url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.ttf') format('truetype');
-      url('fonts/Helvetica/HelveticaNeueLTPro-BdExO.ttf') format('truetype');
+      url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff2') format('woff2'),
+      url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff') format('woff'),
+      url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -135,6 +136,9 @@ h1, h2, h3, h4, h5, h6 {
 p, a{
  font-weight: 500; 
  line-height: 1.15;
+ b {
+  font-weight: 650; 
+ }
 }
 
 @include respond-to(extrasmall-screens) {

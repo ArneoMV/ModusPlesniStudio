@@ -38,6 +38,7 @@
  }
  p {
    color: $primary-0;
+   letter-spacing: 0.05em;
  }
  @include respond-to(small-screens) {
    h2 { font-size: 1.5em;}
