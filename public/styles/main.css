@@ -871,6 +871,7 @@ footer .social .social__logos a img {
   }
   footer .footer__info div {
     place-self: center;
+    align-self: start;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -881,6 +882,7 @@ footer .social .social__logos a img {
   }
   footer .footer__info div {
     place-self: center;
+    align-self: start;
   }
 }
 
