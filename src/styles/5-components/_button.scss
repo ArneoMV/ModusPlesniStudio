@@ -3,10 +3,9 @@
 .btn__form {
  width: auto;
  margin: 0.3em auto;
- padding: 0.5em 0.7em 0.2em 0.7em;
+ padding: 0.5em 0.7em 0.35em 0.7em;
  display: flex;
 
- font-family: "Helvetica Neue LT Pro";
  font-size: 3em;
  font-style: oblique;
  font-weight: 950;
@@ -15,4 +14,8 @@
  border: 1px solid black;
 
  cursor: pointer;
+ &:hover {
+  background-color: rgba(171, 74, 171, 0.33);
+  border: 2px solid black;
+ }
 }
