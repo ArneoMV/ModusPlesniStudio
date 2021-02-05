@@ -1,139 +1,143 @@
 @font-face {
-  font-family: 'HelveticaNeueLT Pro 55 Roman';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Bd.ttf') format('truetype');
+  font-family: 'Sansita One';
+  src: url('../fonts/SansitaOne/SansitaOne.woff2') format('woff2'),
+      url('../fonts/SansitaOne/SansitaOne.woff') format('woff'),
+      url('../fonts/SansitaOne/SansitaOne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Bree Serif';
+  src: url('../fonts/BreeSerif/BreeSerif-Regular.woff2') format('woff2'),
+      url('../fonts/BreeSerif/BreeSerif-Regular.woff') format('woff'),
+      url('../fonts/BreeSerif/BreeSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Open Sans
+@font-face {
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-BoldItalic.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-BoldItalic.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-Extrabold.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-Extrabold.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-Bold.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLT Pro 53 Ex';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdEx.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Pro 53 Ex';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BdExO.ttf') format('truetype');
-  font-weight: bold;
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-ExtraboldItalic.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-ExtraboldItalic.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-ExtraboldItalic.ttf') format('truetype');
+  font-weight: 800;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLT Pro 95 Blk';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Blk.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Pro 93 BlkEx';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-BlkExO.ttf') format('truetype');
-  font-weight: 900;
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-Italic.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-Italic.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-Italic.ttf') format('truetype');
+  font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLT Pro 65 Md';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Hv.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Pro 45 Lt';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-Lt.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Pro 43 LtEx';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtEx.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLT Pro 43 LtEx';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-LtExO.ttf') format('truetype');
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSansLight-Italic.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSansLight-Italic.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSansLight-Italic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLT Pro 33 ThEx';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThEx.ttf') format('truetype');
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-Light.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-Light.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLT Pro 33 ThEx';
-  src: url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.woff2') format('woff2'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.woff') format('woff'),
-      url('fonts/Helvetiva-web/HelveticaNeueLTPro-ThExO.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  // font-family: 'HelveticaNeueLTPro-BdExO';
-  font-family: 'Helvetica Neue LT Pro 93 Black extended Oblique';
-  font-family: "HelveticaNeueLT Std Blk Cn", "HelveticaNeueLTStd-BlkCn", "hnc_font", "MyFont_IE";;
-  src: 
-      url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff2') format('woff2'),
-      url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.woff') format('woff'),
-      url('fonts/Helvetica/HelveticaNeueLTPro-BlkExO.ttf') format('truetype');
-  font-weight: 300;
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-Semibold.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-Semibold.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('public/fonts/OpenSans/OpenSans-SemiboldItalic.woff2') format('woff2'),
+      url('public/fonts/OpenSans/OpenSans-SemiboldItalic.woff') format('woff'),
+      url('public/fonts/OpenSans/OpenSans-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
+
+
 
 
 h1, h2, h3, h4, h5, h6, p, a, label, button {
-  font-family: "Helvetica Neue LT Pro", serif;
   margin: 0;
   line-height: 1;
   text-decoration: none;
 }
 // H1 - H6
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sansita One';
  font-weight: 750;
  letter-spacing: 0.05em;
  margin: 0;
 }
 p, a{
+  font-family: 'Bree Serif';
  font-weight: 500; 
  line-height: 1.15;
  b {
