@@ -21,6 +21,7 @@ body {
   font-family: "Montserrat", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
+  background-color: #FBFBFB;
 }
 
 ul {
@@ -1001,20 +1002,20 @@ footer .social .social__logos a img {
 }
 
 .home {
-  margin: 1em auto 3em auto;
+  margin: 0 auto 3em auto;
 }
 .home section:nth-child(1) {
-  background-color: #FBFBFB;
   height: 100vh;
-  width: 100%;
 }
 .home section:nth-child(2) {
   background-color: #A447A5;
   height: 100vh;
-  width: 100%;
 }
 .home section:nth-child(4) {
   background-color: #A447A5;
+}
+.home section:nth-child(1), .home section:nth-child(2), .home section:nth-child(3), .home section:nth-child(4), .home section:nth-child(5) {
+  width: 100vw;
 }
 
 .middle__container {
@@ -1103,6 +1104,8 @@ footer .social .social__logos a img {
 }
 @media only screen and (min-width: 921px) and (max-width: 1199px) {
   .home__container {
+    position: relative;
+    bottom: 10vh;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "home_image home_article";
@@ -1116,6 +1119,8 @@ footer .social .social__logos a img {
 }
 @media only screen and (min-width: 1200px) {
   .home__container {
+    position: relative;
+    bottom: 10vh;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "home_image home_article";
@@ -1509,6 +1514,10 @@ footer .social .social__logos a img {
   max-height: 65ch;
   color: #FBFBFB;
   padding: 4em;
+}
+
+.onama {
+  margin: 0 auto 3em auto;
 }
 
 .card {
