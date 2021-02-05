@@ -21,7 +21,6 @@ body {
   font-family: "Montserrat", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
-  background-color: #F3ECEC;
 }
 
 ul {
@@ -995,14 +994,17 @@ footer .social .social__logos a img {
 }
 
 .home {
-  margin: 3em 0;
+  margin: 1em auto 3em auto;
 }
-.home section {
+.home section:nth-child(1) {
+  background-color: #FBFBFB;
   height: 100vh;
   width: 100%;
 }
 .home section:nth-child(2) {
   background-color: #A447A5;
+  height: 100vh;
+  width: 100%;
 }
 .home section:nth-child(4) {
   background-color: #A447A5;
@@ -1175,8 +1177,8 @@ footer .social .social__logos a img {
 
 .hsds {
   width: 80%;
-  height: 80%;
-  margin: 0 auto;
+  height: auto;
+  margin: 3em auto;
 }
 .hsds h3, .hsds p {
   color: #151515;
@@ -1292,8 +1294,10 @@ footer .social .social__logos a img {
 
 .natjecanja {
   width: 100vw;
+  height: auto;
   color: #FBFBFB !important;
   padding: 2em 0;
+  margin: 2em 0;
 }
 .natjecanja h2 {
   text-align: center;
