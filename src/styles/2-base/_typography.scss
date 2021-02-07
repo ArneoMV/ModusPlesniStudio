@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
  letter-spacing: 0.05em;
  margin: 0;
 }
-p, a{
+p, a, ul li{
   font-family: 'Open Sans';
   font-weight: 400; 
   line-height: 1.15;
@@ -144,7 +144,7 @@ p, a{
     font-weight: 650; 
   }
 }
-label, button { 
+label, button, legend { 
   font-family: 'Open Sans';
   font-weight: 750;
   letter-spacing: 0.05em;

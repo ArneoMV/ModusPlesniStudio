@@ -30,7 +30,7 @@ ul {
 }
 
 main {
-  height: 100%;
+  height: auto;
   width: 100%;
   position: relative;
   z-index: 99;
@@ -224,16 +224,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-p, a {
+p, a, ul li {
   font-family: "Open Sans";
   font-weight: 400;
   line-height: 1.15;
 }
-p b, a b {
+p b, a b, ul li b {
   font-weight: 650;
 }
 
-label, button {
+label, button, legend {
   font-family: "Open Sans";
   font-weight: 750;
   letter-spacing: 0.05em;
@@ -1519,7 +1519,61 @@ footer .social .social__logos a img {
 .onama {
   margin: 0 auto 3em auto;
 }
-
+.onama .treneri_container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2em;
+}
+.onama .treneri_container .card__trener {
+  background-color: #A447A5;
+  color: #FBFBFB;
+  border-radius: 10px;
+  position: relative;
+  height: 300px;
+  width: auto;
+  max-width: 450px;
+  min-width: 350px;
+}
+.onama .treneri_container .card__trener .card__trener__tekst {
+  width: 70%;
+  position: absolute;
+  z-index: 99;
+  padding: 1em;
+  display: grid;
+  grid-gap: 1em;
+}
+.onama .treneri_container .card__trener .card__trener__tekst p {
+  font-size: 0.9em;
+}
+.onama .treneri_container .card__trener .card__trener__tekst legend {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.onama .treneri_container .card__trener .card__trener__tekst ul li {
+  font-style: oblique;
+  font-weight: 600px;
+  font-size: 1em;
+}
+.onama .treneri_container .card__trener .card__circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #E36289;
+  height: 65%;
+  width: 45%;
+  border-radius: 100% 0px 10px 0px;
+}
+.onama .treneri_container .card__trener .card__circle img {
+  height: auto;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  right: -15px;
+}
 .card {
   width: auto;
   max-width: 450px;
@@ -2277,16 +2331,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-p, a {
+p, a, ul li {
   font-family: "Open Sans";
   font-weight: 400;
   line-height: 1.15;
 }
-p b, a b {
+p b, a b, ul li b {
   font-weight: 650;
 }
 
-label, button {
+label, button, legend {
   font-family: "Open Sans";
   font-weight: 750;
   letter-spacing: 0.05em;
